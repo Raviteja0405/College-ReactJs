@@ -14,3 +14,8 @@ p{
 h2{
     color: maroon;
 }
+
+img{
+    width: 700px;
+    margin: 10px;
+}
