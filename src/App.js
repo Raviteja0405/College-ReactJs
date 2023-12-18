@@ -41,14 +41,22 @@
 import "./App.css";
 function App() {
   //state
-  let emps = [
-    { eno: 100, name: "ravi", age: 21, city: "hyd" },
-    { eno: 200, name: "bhanu", age: 31, city: "chennai" },
-    { eno: 300, name: "manasa", age: 41, city: "bangalore" },
-    { eno: 400, name: "vikas", age: 51, city: "pune" },
-    { eno: 500, name: "suresh", age: 61, city: "Delhi" },
-  ];
+  // let emps = [
+  //   { eno: 100, name: "ravi", age: 21, city: "hyd" },
+  //   { eno: 200, name: "bhanu", age: 31, city: "chennai" },
+  //   { eno: 300, name: "manasa", age: 41, city: "bangalore" },
+  //   { eno: 400, name: "vikas", age: 51, city: "pune" },
+  //   { eno: 500, name: "suresh", age: 61, city: "Delhi" },
+  // ];
 
+  // request handler function 
+  function test(){
+    console.log("test function called");
+  }
+
+  function testAgain(a){
+    console.log("test again called and a is",a);
+  }
   return (
     <div>
       <h1 className="text-info display-1 bg-light">Welcome to React</h1>
@@ -75,7 +83,9 @@ function App() {
           }
         </tbody>
       </table> */}
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+
+        {/* <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
           {emps.map((empObj) => (
             <div className="col" key={empObj.eno}>
               <div className="card">
@@ -88,7 +98,17 @@ function App() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
+
+
+        {/* Event Handling */}
+        <button className="btn btn-success" onClick={test}>Click on me</button> {/* un parameterised */}
+        <button className="btn btn-warning" onClick={()=>testAgain(100)}>Click on me</button> {/* parameterised, we should'nt call it directly*/}
+        {/* we use "on" before the event, and inside {} these we should have a request handler function which is declared bofore return word i.e in states...(ig)*/}
+        {/* test is the name of the function we should just give name not ()*/}
+
+
+        {/* Component nesting */}
       </div>
     </div>
   );
