@@ -39,6 +39,8 @@
 // }
 
 import "./App.css";
+import Test1 from "./components/test1/Test1"
+// import Test2 from "./components/test2/Test2"
 function App() {
   //state
   // let emps = [
@@ -50,13 +52,13 @@ function App() {
   // ];
 
   // request handler function 
-  function test(){
-    console.log("test function called");
-  }
+  // function test(){
+  //   console.log("test function called");
+  // }
 
-  function testAgain(a){
-    console.log("test again called and a is",a);
-  }
+  // function testAgain(a){
+  //   console.log("test again called and a is",a);
+  // }
   return (
     <div>
       <h1 className="text-info display-1 bg-light">Welcome to React</h1>
@@ -102,13 +104,19 @@ function App() {
 
 
         {/* Event Handling */}
-        <button className="btn btn-success" onClick={test}>Click on me</button> {/* un parameterised */}
-        <button className="btn btn-warning" onClick={()=>testAgain(100)}>Click on me</button> {/* parameterised, we should'nt call it directly*/}
+        {/* <button className="btn btn-success" onClick={test}>Click on me</button> un parameterised */}
+        {/* <button className="btn btn-warning" onClick={()=>testAgain(100)}>Click on me</button> parameterised, we should'nt call it directly */}
         {/* we use "on" before the event, and inside {} these we should have a request handler function which is declared bofore return word i.e in states...(ig)*/}
         {/* test is the name of the function we should just give name not ()*/}
 
 
         {/* Component nesting */}
+        {/* first we are making test1 and test2 as children of root element, to make a children we import */}
+        <Test1/> {/* we can also write opening and closing tags  if we want something inside it*/}
+        {/* <Test2></Test2> */}
+
+        {/* Now making test1 as root chlld and test2 as child of test1 */}
+
       </div>
     </div>
   );
